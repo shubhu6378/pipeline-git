@@ -16,4 +16,22 @@ pipeline{
             }
         }
     }
+
+
+    post{
+
+        always{
+
+            sh 'echo "ALWAYS Success"'
+        }
+
+        success{
+
+            sh 'echo "Pipeline success"'
+        }
+
+        failure{
+            sh 'echo "Pipeline failed"'
+        }
+    }
 }
